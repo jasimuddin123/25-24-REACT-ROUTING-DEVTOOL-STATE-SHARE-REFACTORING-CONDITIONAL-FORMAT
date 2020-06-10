@@ -6,7 +6,7 @@ const Product = (props) => {
 
     const { name, price, img, stock, seller, key } = props.product;
 
-    // console.log(props.product);
+     console.log(props);
     return (
         <div className="product">
             <div >
@@ -19,7 +19,10 @@ const Product = (props) => {
                 <br/>
                 <p>Price: ${price}</p>
                 <h3>Only {stock} Order Soon -Now</h3>
-                <button className="main-button" onClick={()=>props.addHandleProduct(props.product)}>Buy Now</button>
+
+                {props.showAddToCart === true && <button className="main-button"
+                 onClick={()=>props.addHandleProduct(props.product)}>
+                     Buy Now</button>}
             </div>
         </div>
     );
