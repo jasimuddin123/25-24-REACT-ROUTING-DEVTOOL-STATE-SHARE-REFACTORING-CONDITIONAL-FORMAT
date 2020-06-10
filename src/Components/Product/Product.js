@@ -1,9 +1,10 @@
 import React from 'react';
 import './Product.css';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
 
-    const { name, price, img, stock, seller } = props.product;
+    const { name, price, img, stock, seller, key } = props.product;
 
     // console.log(props.product);
     return (
@@ -12,7 +13,7 @@ const Product = (props) => {
                 <img src={img} alt=""/>
             </div>
             <div>
-                <h3>{name}</h3>
+                <h3><Link to={"/product/" + key}>{name}</Link></h3>
                 <br/>
                 <p>By:{seller}</p>
                 <br/>

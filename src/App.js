@@ -11,6 +11,7 @@ import {
 import Review from './Components/Review/Review';
 import Inventory from './Components/Inventory/Inventory';
 import NotFound from './Components/NotFound/NotFound';
+import ProductDetails from './Components/ProductDetails/ProductDetails';
 
 
 
@@ -35,11 +36,15 @@ function App() {
             <Route exact path="/">
               <Shop></Shop>
             </Route>
+           <Route path="product/:productKey">
+             <ProductDetails></ProductDetails>
+           </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
 
         </Switch>
+
       </Router>
      
       
